@@ -1,0 +1,333 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    min-width: 320px;
+    min-height: 100%;
+}
+
+body{
+    background-color: hsl(0, 0%, 5%);
+    margin: 0;
+
+    min-width: 320px;
+    min-height: 100%;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;  
+    z-index: 1000;
+    
+    display: flex;
+    justify-content: center; 
+    align-content: center;
+    padding-top: 10px;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    border: 1px solid hsl(0, 0%, 70%);
+    border-radius: 50px;
+    list-style-type: none;
+    background-color: hsl(0, 0%, 0%);
+    padding: 2px;
+    margin: 2px;
+}
+.navbar a{
+    color: hsl(0, 0%, 95%);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.navbar li{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    float: left;
+}
+.navbar a:hover{
+    text-decoration: visible;
+    color: hsl(0, 0%, 60%)
+}
+
+main{
+    width: 100%;
+    padding-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#introductionDiv{
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+
+    padding: 100px 20px;
+    gap: 100px;    
+}
+#introductionDiv h1, h3{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+#introductionDiv h1{
+    color: white;
+    font-size: 5em;
+}
+#introductionDiv h3{
+    color: hsl(0, 0%, 40%);
+    font-size: 2em;
+}
+
+#aboutMeSection{
+    background-color: #1a1a1a;
+
+    min-width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+#aboutMeSection div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#subDivSection1{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+
+    width: 100%;
+    flex-direction: column;
+
+    gap: 25px;
+    padding: 25px;
+}
+#subDivSection2{
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    display: flex;
+    column-gap: 50px;
+    flex-direction: row-reverse;
+}
+#neonPixelGifCoding{
+    border: 1px solid #1a1a1a;
+    border-radius: 20px;
+    width: 450px;
+}
+#subDivSection2ParSection{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    flex-direction: column;
+    font-size: 20px;
+
+    min-width: 50%;
+    height: auto;
+    gap: 25px;
+}
+#subDivSection2ParSection p{
+    margin: 10px;
+}
+
+#projectSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    min-height: auto;
+    width: 100%;
+
+    animation: appear linear;
+    animation-timeline: view(); /* Animation happens whenever the section starts getting viewed */
+    animation-range: entry 0 cover 30%; /* Animation happens as soon soon as it enters
+    the viewport, then finishes when it reaches 40% of the viewport */
+}
+#sub-div-project-section-1{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    width: 100%;
+    gap: 15px;
+    padding-top: 25px;
+}
+#sub-div-project-section-2 > *{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+}
+#project-num-1{
+    padding: 50px;
+    column-gap: 50px;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+#project-num-1 p{
+    margin: 10px;
+}
+#simulo-id{
+    color: white;
+}
+#simulo-id:hover{
+    transform: scale(1.1);
+}
+#simulo-id:active{
+    transform: scale(0.95);
+}
+#project-num-2{
+    padding: 50px;
+    column-gap: 50px;
+
+    display: flex;
+    flex-direction: row;
+}
+#project-num-2 p{
+    margin: 10px;
+}
+#STS-Images-Container{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 10px;
+    padding: 10px;
+
+    max-width: 700px;
+    scrollbar-width: none;
+    border-radius: 10px;
+}
+#STS-Images-Container img{
+    height: auto;
+    width: 600px;
+    flex-shrink: 0;
+    border-radius: 10px;
+
+    animation: autoscroll 10s linear infinite alternate;
+}
+#STS-id{
+    color: white;
+}
+#STS-id:hover{
+    transform: scale(1.1);
+}
+#STS-id:active{
+    transform: scale(0.95);
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.75;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes autoscroll{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-100vh);
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #introductionDiv{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+        padding-bottom: 50px;
+
+        min-height: calc(100vh - 80px);
+    }
+    #aboutMeSection{
+        padding-top: 50px;
+    }
+    #subDivSection2{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
+    #neonPixelGifCoding {
+        width: 90%; 
+        max-width: 450px;
+    }
+    #project-num-1{
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
+    #SimuloSS {
+        width: 90%; 
+        max-width: 450px;
+        height: auto;
+    }
+    #project-num-2{
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
+    #STS-Images-Container {
+        width: 90%; 
+        max-width: 450px;
+        height: auto;
+    }
+}
+
+

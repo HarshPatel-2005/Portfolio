@@ -22,7 +22,7 @@
             <li><a href="#introductionDiv">Introduction</a></li>
             <li><a href="#aboutMeSection">About Me</a></li>
             <li><a href="#projectSection">Projects</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#contact-me">Contact</a></li>
         </ul>
     </nav>
     
@@ -34,7 +34,7 @@
                 <h1>Harsh Patel</h1>
                 <h3>An Aspiring Software Engineering Student</h3>
             </div>
-                <img src="Images\LinkedInPic.jpg" alt="Harsh-Picture-ID" style="width: 500px; 
+                <img id="LinkedInPic" src="Images\LinkedInPic.jpg" alt="Harsh-Picture-ID" style="width: 500px; 
                 border: 1px solid black; border-radius: 50px;">
         </div>
 
@@ -84,7 +84,7 @@
             <div id="sub-div-project-section-2" style="width: 100%;">
                 <div style="display: flex; flex-direction: column; align-items: center;
                     margin-top: 25px;">
-                    <h2 style="font-size: 25px"><u>Simulo</u></h2>
+                    <p style="font-size: 25px"><u>Simulo <a href="https://github.com/HarshPatel-2005/Simulo" target="_blank"><i class="fa-brands fa-github" style="font-size: 50px;"></i></a></u></p>
                     <div class="projects" id="project-num-1" style="padding-top: 25px;">
                         <div id="project-num-1-desc"
                         style="display: flex; flex-direction: column;
@@ -112,13 +112,13 @@
                             gap: 20px;">
                             <img id="SimuloSS" src="Images\SimuloSS.png" alt="Simulo" style="width: 500px;
                             border: 2px solid black; border-radius: 10px;">
-                        <a href="https://github.com/HarshPatel-2005/Simulo" target="_blank"><i id="simulo-id" class="fa-brands fa-github" style="font-size: 30px;"></i></a>
                         </div>
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center;
                     margin-top: 25px;">
-                    <h2 style="font-size: 25px"><u>Smart Travel Services</u></h2>
+                    <p style="font-size: 25px"><u>Smart Travel Services <a href="https://github.com/HarshPatel-2005/Smart-Travel-Service" target="_blank"><i class="fa-brands fa-github" 
+                                style="font-size: 50px;"></i></a></u></p>
                     <div class="projects" id="project-num-2">
                         <div id="project-num-2-desc"
                         style="display: flex; flex-direction: column;
@@ -147,7 +147,6 @@
                                 <img src="Images\AnalyticsSTS.png">
                                 <img src="Images\QSSTS.png">
                             </div>
-                            <a href="https://github.com/HarshPatel-2005/Smart-Travel-Service" target="_blank"><i id="STS-id" class="fa-brands fa-github" style="font-size: 30px;"></i></a>
                         </div>
                     </div>
                 </div>
@@ -155,7 +154,52 @@
 
         </section>
 
-
+        <section id="contact-me" style="min-height: auto; width: 100%; 
+        flex-direction: column;">
+            <div id="contact-me-div" style="display: flex; align-items: center; gap: 10px;
+            padding: 25px;">
+                <h2 style="font-size:50px;">Contact Me</h2>
+                <p style="font-size: 25px;">Curious about me? Feel free to send me an email!</p>
+            </div>
+            <div id="contact-div">
+                <div id="contact-me-info" style=" display: flex; align-items: left;">
+                    <h3 style="font-size: 30px;">Let's Connect! ✉️</h3>
+                    <p style="font-size: 18px;">I want to begin by thanking you for visiting my page! 🙏</p>
+                    <p style="font-size: 18px; line-height: 1.5;">As a Software Engineering Student, I'd love to learn. contribute
+                        and be part of a team working on something I'm truly passionate
+                        about!
+                    </p>
+                    <p style="font-size: 18px; line-height: 1.5;">Feel Free to send me an email using this form or by texting me on one of the
+                        socials below!
+                    </p>
+                    <div id="social-icons">
+                        <a href="https://www.linkedin.com/in/harsh-patel011/" target="_blank"><i class="fa-brands fa-square-linkedin" style="color:#0A66C2"></i></a>
+                        <a href="https://github.com/HarshPatel-2005" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/_harsh.patl/?next=%2F" target="_blank"><i class="fa-brands fa-instagram" style="color:#C13584"></i></a>
+                    </div>
+                </div>
+                <div id="div-form" method="POST">
+                    <form action="https://formspree.io/f/xnjwgnaj" id="form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea type="message" id="message" name="message" placeholder="Your Message" required
+                            style="height: 100px;"></textarea>
+                        </div>
+                        <input id="submit" type="submit" value="Send Message"
+                        style="width: 25%;">
+                    </form>
+                </div>
+            </div>
+        </section>
         
     </main>
 

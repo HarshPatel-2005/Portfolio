@@ -1,8 +1,15 @@
-* {
+/* RESET */
+
+*,
+*::before,
+*::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* GLOBAL */
+
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 200px;
@@ -12,51 +19,12 @@ html{
 
 body{
     background-color: hsl(0, 0%, 5%);
-    margin: 0;
-
     min-width: 320px;
     min-height: 100%;
-}
 
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0; 
-    width: 100%;  
-    z-index: 1000;
-    
-    display: flex;
-    justify-content: center; 
-    align-content: center;
-    padding-top: 10px;
-}
-.navbar ul{
-    display: flex;
-    justify-content: center;
-    border: 1px solid hsl(0, 0%, 70%);
-    border-radius: 50px;
-    list-style-type: none;
-    background-color: hsl(0, 0%, 0%);
-    padding: 2px;
-    margin: 2px;
-}
-.navbar a{
-    color: hsl(0, 0%, 95%);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-}
-.navbar li{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
-    float: left;
-}
-.navbar a:hover{
-    text-decoration: visible;
-    color: hsl(0, 0%, 60%)
 }
 
 main{
@@ -67,301 +35,452 @@ main{
     flex-direction: column;
 }
 
+.section-animation{
+    animation: appear linear;
+    animation-timeline: view();
+}
+
+/* NAVBAR */
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+
+    padding-top: 10px;
+}
+
+.navbar ul{
+    display: flex;
+
+    list-style-type: none;
+
+    border: 1px solid hsl(0, 0%, 70%);
+    border-radius: 50px;
+
+    background-color: black;
+
+    padding: 2px;
+    margin: 2px;
+}
+
+.navbar li{
+    font-weight: 400;
+}
+
+.navbar a{
+    color: hsl(0, 0%, 95%);
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 15px;
+}
+
+.navbar a:hover{
+    color: hsl(0, 0%, 60%);
+}
+
+/* INTRODUCTION */
+
 #introductionDiv{
     min-height: 600px;
 
     display: flex;
-    flex-direction: row; 
     justify-content: center;
-    align-items: center; 
-    text-align: center; 
+    align-items: center;
+
+    text-align: center;
 
     padding: 100px 20px;
-    gap: 100px;    
+    gap: 100px;
 }
-#introductionDiv h1, h3{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
+
+.intro-text{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#introductionDiv h1,
+#introductionDiv h3{
     font-weight: 600;
-    font-style: normal;
 }
+
 #introductionDiv h1{
     color: white;
     font-size: 5em;
 }
+
 #introductionDiv h3{
     color: hsl(0, 0%, 40%);
     font-size: 2em;
 }
 
+#LinkedInPic{
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+/* ABOUT */
+
 #aboutMeSection{
     background-color: #1a1a1a;
 
-    min-width: 100%;
-    
+    width: 100%;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    
-    animation: appear linear;
-    animation-timeline: view();
+    align-items: center;
+
     animation-range: entry 0 cover 40%;
 }
+
 #aboutMeSection div{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
-#subDivSection1{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    color: white;
 
+#subDivSection1{
     width: 100%;
+
     flex-direction: column;
+
+    color: white;
+    text-align: center;
 
     gap: 25px;
     padding: 25px;
-}
-#subDivSection2{
-    padding-top: 10px;
-    padding-bottom: 50px;
 
+    font-weight: 700;
+}
+
+#subDivSection1 h2{
+    font-size: 50px;
+}
+
+#subDivSection1 p{
+    font-size: 25px;
+}
+
+#subDivSection2{
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    
-    display: flex;
-    column-gap: 50px;
-    flex-direction: row-reverse;
-}
-#neonPixelGifCoding{
-    border: 1px solid #1a1a1a;
-    border-radius: 20px;
-    width: 450px;
-}
-#subDivSection2ParSection{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    color: white;
-    flex-direction: column;
-    font-size: 20px;
 
+    display: flex;
+    flex-direction: row-reverse;
+
+    column-gap: 50px;
+
+    padding: 10px 20px 50px;
+}
+
+#neonPixelGifCoding{
+    width: 450px;
+
+    border-radius: 20px;
+}
+
+#subDivSection2ParSection{
     min-width: 50%;
-    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: 700;
+
     gap: 25px;
 }
+
 #subDivSection2ParSection p{
     line-height: 1.5;
     margin: 10px;
 }
 
+/* PROJECTS */
+
 #projectSection{
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
 
-    min-height: auto;
-    width: 100%;
-
-    animation: appear linear;
-    animation-timeline: view(); /* Animation happens whenever the section starts getting viewed */
-    animation-range: entry 0 cover 30%; /* Animation happens as soon soon as it enters
-    the viewport, then finishes when it reaches 40% of the viewport */
+    animation-range: entry 0 cover 30%;
 }
+
 #sub-div-project-section-1{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    color: white;
-    font-size: 20px;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
 
-    width: 100%;
+    color: white;
+
     gap: 15px;
     padding-top: 25px;
+
+    font-size: 20px;
+    font-weight: 700;
 }
-#sub-div-project-section-2 > *{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
+
+#sub-div-project-section-1 h2{
+    font-size: 50px;
+}
+
+#sub-div-project-section-1 p{
+    font-size: 25px;
+}
+
+#sub-div-project-section-2{
+    width: 100%;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 25px;
+
     color: white;
-    font-size: 16px;
 }
-#project-num-1{
+
+.project-title{
+    font-size: 25px;
+}
+
+.projects{
+    display: flex;
+
     padding: 50px;
     column-gap: 50px;
+}
 
-    display: flex;
+.projects p{
+    margin: 10px;
+}
+
+#project-num-1{
     flex-direction: row-reverse;
 }
-#project-num-1 p{
-    margin: 10px;
-}
-#project-num-2{
-    padding: 50px;
-    column-gap: 50px;
 
+.project-description{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#project-num-2 p{
-    margin: 10px;
+
+#SimuloSS{
+    width: 500px;
+
+    border: 2px solid black;
+    border-radius: 10px;
 }
+
 #STS-Images-Container{
     display: flex;
+
     overflow-x: auto;
     white-space: nowrap;
+
     gap: 10px;
     padding: 10px;
 
     max-width: 700px;
+
     scrollbar-width: none;
+
     border-radius: 10px;
 }
+
 #STS-Images-Container img{
-    height: auto;
     width: 600px;
+
     flex-shrink: 0;
+
     border-radius: 10px;
 
     animation: autoscroll 10s linear infinite alternate;
 }
-#STS-id{
-    color: white;
-}
-.fa-github{
-    color: white;
-}
-.fa-github:hover, .fa-square-linkedin:hover, .fa-instagram:hover{
-    transform: scale(1.1);
-}
-.fa-brands:active{
-    transform: scale(0.95);
-}
-a:active, #submit:active{
-    transform: scale(0.95);
-}
+
+/* CONTACT */
 
 #contact-me{
     background-color: #1a1a1a;
-    
+
+    width: 100%;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    
-    animation: appear linear;
-    animation-timeline: view();
+    align-items: center;
+
     animation-range: entry 0 cover 40%;
 }
-#contact-me div{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+
+#contact-me-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+
+    padding: 25px;
+    gap: 10px;
+}
+
+#contact-me-div h2{
+    font-size: 50px;
+}
+
+#contact-me-div p{
+    font-size: 25px;
+}
+
+#contact-div{
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+
+    gap: 35px;
+    margin: 25px;
+
     color: white;
 }
-#contact-me-div{
-    flex-direction: column;
-}
-#contact-div{ 
-    display: flex; 
-    flex-direction: row;
 
-    width: 100%; 
-    max-width: 1200px; 
-    flex: 1 1 0; 
-    margin: 25px; 
-    gap: 35px;
-}
 #contact-me-info{
+    min-width: 50%;
+
+    display: flex;
     flex-direction: column;
 
     gap: 15px;
-    min-width: 50%; 
-    height: auto;
 }
-#contact-me #social-icons{
-    margin-top: 20px;
-    
-    font-size: 40px;
 
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-around;
+#contact-me-info h3{
+    font-size: 30px;
 }
+
+#contact-me-info p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#social-icons{
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 20px;
+
+    font-size: 40px;
+}
+
 #div-form{
     min-width: 50%;
-    height: auto;
 }
+
 #form{
     display: flex;
     flex-direction: column;
 
-    padding: 25px;
     gap: 20px;
+    padding: 25px;
 }
-#form div{
-    display: flex;
-    gap: 10px;
-}
+
 .form-group{
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
+
     gap: 5px;
 }
-.form-group input, .form-group textarea{
-    border: 0.5px solid black;
 
+.form-group input,
+.form-group textarea{
     width: 100%;
     height: 35px;
+
+    border: 0.5px solid black;
     border-radius: 5px;
+
     padding-left: 10px;
 
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
-    font-style: normal;
+
     color: black;
 }
+
+textarea{
+    height: 100px !important;
+    padding-top: 10px;
+}
+
 ::placeholder{
     font-size: 14px;
 }
-textarea{
-    padding-top: 10px;
-}
+
 #submit{
-    border: 2px solid black;
-    border-radius: 5ch;
+    width: 25%;
     height: 45px;
 
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
+    border: 2px solid black;
+    border-radius: 5ch;
+
     font-weight: 500;
-    font-style: normal;
+
     color: black;
 }
+
+/* ICONS */
+
+.fa-github{
+    color: white;
+}
+
+.fa-square-linkedin{
+    color: #0A66C2;
+}
+
+.fa-instagram{
+    color: #C13584;
+}
+
+.fa-brands:hover{
+    transform: scale(1.1);
+}
+
+.fa-brands:active,
+a:active,
+#submit:active{
+    transform: scale(0.95);
+}
+
+/* ANIMATIONS */
 
 @keyframes appear{
     from{
         opacity: 0;
         scale: 0.75;
     }
+
     to{
         opacity: 1;
         scale: 1;
@@ -370,67 +489,84 @@ textarea{
 
 @keyframes autoscroll{
     0%{
-        transform:translateX(0);
+        transform: translateX(0);
     }
+
     100%{
-        transform:translateX(-1800px);
+        transform: translateX(-1800px);
     }
 }
 
-@media screen and (max-width: 1024px){
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px){
+
     #introductionDiv{
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+
         gap: 50px;
+
         padding-bottom: 50px;
 
         min-height: calc(100vh - 80px);
     }
+
     #aboutMeSection{
         padding-top: 50px;
     }
+
     #subDivSection2{
         flex-direction: column;
-        align-items: center;
+
         text-align: center;
+
         gap: 50px;
-        padding-left: 20px; 
-        padding-right: 20px;
     }
-    #project-num-1, #project-num-2{
-        gap: 20px;
+
+    #project-num-1,
+    #project-num-2{
         flex-direction: column;
+
         align-items: center;
         text-align: center;
-        padding-left: 20px; 
+
+        gap: 20px;
+
+        padding-left: 20px;
         padding-right: 20px;
     }
-    #SimuloSS, #LinkedInPic, #STS-Images-Container, #neonPixelGifCoding{
-        width: 90%; 
+
+    #LinkedInPic,
+    #SimuloSS,
+    #neonPixelGifCoding,
+    #STS-Images-Container img{
+        width: 90%;
         max-width: 450px;
         height: auto;
     }
+
     #contact-div{
-        display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column;
         align-items: center;
+
         width: 100%;
+
         padding: 50px;
+
         gap: 40px;
     }
-    #contact-me-div, #div-form, #submit{
-        width: 100% !important;
-        min-width: 90% !important;
+
+    #contact-me-div,
+    #div-form,
+    #submit{
+        width: 100%;
+        min-width: 90%;
+
         text-align: center;
     }
-    #contact-me #social-icons {
-        flex-direction: row;
+
+    #social-icons{
         justify-content: center;
         gap: 30px;
     }
-
-
 }
-
-

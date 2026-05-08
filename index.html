@@ -13,8 +13,8 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -25,182 +25,234 @@
             <li><a href="#contact-me">Contact</a></li>
         </ul>
     </nav>
-    
+
     <main>
 
         <div id="introductionDiv">
-            <div style="display: flex; gap: 50px; flex-direction: column;">
+
+            <div class="intro-text">
                 <h3>Hello, my name is</h3>
                 <h1>Harsh Patel</h1>
                 <h3>An Aspiring Software Engineering Student</h3>
             </div>
-                <img id="LinkedInPic" src="Images\LinkedInPic.jpg" alt="Harsh-Picture-ID" style="width: 500px; 
-                border: 1px solid black; border-radius: 50px;">
+
+            <img id="LinkedInPic"
+                src="Images/LinkedInPic.jpg"
+                alt="Harsh-Picture-ID">
         </div>
 
-        <section id="aboutMeSection" style="min-height: auto; width: 100%; 
-        flex-direction: column;">
-            
-            <div id="subDivSection1" style="text-align: center;">
-                <h2 style="font-size: 50px;">About Me</h2>
-                <p style="font-size: 25px;">This is the journey of how I became the person I am today</p>
+        <section id="aboutMeSection" class="section-animation">
+
+            <div id="subDivSection1">
+                <h2>About Me</h2>
+                <p>This is the journey of how I became the person I am today</p>
             </div>
 
-            <div id="subDivSection2" style="text-align: center;">
-                <img id="neonPixelGifCoding" src="Gifs\NeonPixelCodingGif.gif" alt="Neon Pixel Coding">
+            <div id="subDivSection2">
+
+                <img id="neonPixelGifCoding"
+                    src="Gifs/NeonPixelCodingGif.gif"
+                    alt="Neon Pixel Coding">
 
                 <div id="subDivSection2ParSection">
+
                     <p>
-                        Hello! My name is Harsh and I am a first year Software Engineering student in Concordia
-                        University. From a young age, my love for gaming and my curiosity sparked my interest into the understanding of the 
-                        softwares I consume, which is what led me to this path.
+                        Hello! My name is Harsh and I am a first year Software Engineering student in Concordia University. 
+                        From a young age, my love for gaming and my curiosity sparked my interest into the understanding of the softwares I consume, which is what led me to this path.
                     </p>
+
                     <p>
-                        I enjoy solving problems, especially mathematical ones, and love
-                        to turn those solutions into applications that I can utilize. The creativity and
-                        innovation to solve real-world problems fascinates me.
+                        I enjoy solving problems, especially mathematical ones, and love to turn those solutions into applications that I can utilize. 
+                        The creativity and innovation to solve real-world problems fascinates me.
                     </p>
+
                     <p>
-                        Throughout the projects I've done, I've been developing my skills in
-                        Object-Oriented Programming and Data Structures using Java, while practicing on writing clean and consistent code.
+                        Throughout the projects I've done, I've been developing my skills in Object-Oriented Programming and Data Structures using Java, while practicing on writing clean and consistent code. 
                         I've even been practicing front-end development utilizing HTML5, CSS3 and JavaScript!
                     </p>
+
                     <p>
-                        Whenever I'm not coding, I enjoy learning new hobbies, gaming and staying active with my fitness
-                        goals.
+                        Whenever I'm not coding, I enjoy learning new hobbies, gaming and staying active with my fitness goals.
                     </p>
+
                 </div>
             </div>
-            
+
         </section>
 
-        <section id="projectSection">
+        <section id="projectSection" class="section-animation">
 
             <div id="sub-div-project-section-1">
-                <h2 style="font-size: 50px;">Projects</h2>
-                <p style="font-size: 25px;">Projects that I have worked on: </p>
+                <h2>Projects</h2>
+                <p>Projects that I have worked on:</p>
             </div>
 
-            <div id="sub-div-project-section-2" style="width: 100%;">
-                <div style="display: flex; flex-direction: column; align-items: center;
-                    margin-top: 25px;">
-                    <p style="font-size: 25px"><u>Simulo <a href="https://github.com/HarshPatel-2005/Simulo" target="_blank"><i class="fa-brands fa-github" style="font-size: 50px;"></i></a></u></p>
-                    <div class="projects" id="project-num-1" style="padding-top: 25px;">
-                        <div id="project-num-1-desc"
-                        style="display: flex; flex-direction: column;
-                        align-items: center; justify-content: center;
-                        align-content: center;">
-                            <p>
-                            • Led a team in developing an interactive JavaFX application simulating physics concepts through real-time
-                                visualizations
-                            </p>
-                            <p>
-                            • Implemented mathematical models (e.g., Projectile Motion, Spring-Block System, Doppler effect) into
-                                interactive simulations for students to utilize
-                            </p>
-                            <p>
-                            • Designed an easy-to-use interface where users can adjust inputs and instantly see how the simulations change
-                            </p>
-                            <p>
-                            • Gained experience working in a team environment, communicating ideas, and adapting to feedback.
-                            </p>
-                            <p>
-                            • Strengthened my understanding of programming logic and real-time interactions through hands-on development.
-                            </p>
-                            </div>
-                        <div style="display: flex; flex-direction: column; align-items: center;
-                            gap: 20px;">
-                            <img id="SimuloSS" src="Images\SimuloSS.png" alt="Simulo" style="width: 500px;
-                            border: 2px solid black; border-radius: 10px;">
+            <div id="sub-div-project-section-2">
+
+                <!-- SIMULO -->
+
+                <div class="project-container">
+
+                    <p class="project-title">
+                        <u>
+                            Simulo
+                            <a href="https://github.com/HarshPatel-2005/Simulo" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </u>
+                    </p>
+
+                    <div class="projects" id="project-num-1">
+
+                        <div class="project-description">
+
+                            <p>• Led a team in developing an interactive JavaFX application simulating physics concepts through real-time visualizations</p>
+
+                            <p>• Implemented mathematical models (e.g., Projectile Motion, Spring-Block System, Doppler effect) into interactive simulations for students to utilize</p>
+
+                            <p>• Designed an easy-to-use interface where users can adjust inputs and instantly see how the simulations change</p>
+
+                            <p>• Gained experience working in a team environment, communicating ideas, and adapting to feedback.</p>
+
+                            <p>• Strengthened my understanding of programming logic and real-time interactions through hands-on development.</p>
+
                         </div>
+
+                        <img id="SimuloSS"
+                            src="Images/SimuloSS.png"
+                            alt="Simulo">
+
                     </div>
                 </div>
-                <div style="display: flex; flex-direction: column; align-items: center;
-                    margin-top: 25px;">
-                    <p style="font-size: 25px"><u>Smart Travel Services <a href="https://github.com/HarshPatel-2005/Smart-Travel-Service" target="_blank"><i class="fa-brands fa-github" 
-                                style="font-size: 50px;"></i></a></u></p>
+
+                <!-- SMART TRAVEL -->
+
+                <div class="project-container">
+
+                    <p class="project-title">
+                        <u>
+                            Smart Travel Services
+                            <a href="https://github.com/HarshPatel-2005/Smart-Travel-Service" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </u>
+                    </p>
+
                     <div class="projects" id="project-num-2">
-                        <div id="project-num-2-desc"
-                        style="display: flex; flex-direction: column;
-                        align-items: center; justify-content: center;">
-                            <p>
-                            • Developed a Java-based travel management application using object-oriented programming principles.
-                            </p>
-                            <p>
-                            • Implemented features for managing customer and travel information with a focus on clean and organized code.
-                            </p>
-                            <p>
-                            • Built custom validations and error-handling systems to improve reliability and user experience.
-                            </p>
-                            <p>
-                            • Worked with file handling and structured data storage to save and manage application data.
-                            </p>
-                            <p>
-                            • Improved my problem-solving skills by designing systems that were scalable, and easy to maintain.
-                            </p>
-                            </div>
-                        <div style="display: flex; flex-direction: column; align-items: center;
-                            gap: 20px;">
-                            <div id="STS-Images-Container">
-                                <img src="Images\ClientsSTS.png">
-                                <img src="Images\TripsSTS.png">
-                                <img src="Images\AnalyticsSTS.png">
-                                <img src="Images\QSSTS.png">
-                            </div>
+
+                        <div class="project-description">
+
+                            <p>• Developed a Java-based travel management application using object-oriented programming principles.</p>
+
+                            <p>• Implemented features for managing customer and travel information with a focus on clean and organized code.</p>
+
+                            <p>• Built custom validations and error-handling systems to improve reliability and user experience.</p>
+
+                            <p>• Worked with file handling and structured data storage to save and manage application data.</p>
+
+                            <p>• Improved my problem-solving skills by designing systems that were scalable, and easy to maintain.</p>
+
                         </div>
+
+                        <div id="STS-Images-Container">
+                            <img src="Images/ClientsSTS.png">
+                            <img src="Images/TripsSTS.png">
+                            <img src="Images/AnalyticsSTS.png">
+                            <img src="Images/QSSTS.png">
+                        </div>
+
                     </div>
                 </div>
+
             </div>
 
         </section>
 
-        <section id="contact-me" style="min-height: auto; width: 100%; 
-        flex-direction: column;">
-            <div id="contact-me-div" style="display: flex; align-items: center; gap: 10px;
-            padding: 25px;">
-                <h2 style="font-size:50px;">Contact Me</h2>
-                <p style="font-size: 25px;">Curious about me? Feel free to send me an email!</p>
+        <section id="contact-me" class="section-animation">
+
+            <div id="contact-me-div">
+                <h2>Contact Me</h2>
+                <p>Curious about me? Feel free to send me an email!</p>
             </div>
+
             <div id="contact-div">
-                <div id="contact-me-info" style=" display: flex; align-items: left;">
-                    <h3 style="font-size: 30px;">Let's Connect! ✉️</h3>
-                    <p style="font-size: 18px;">I want to begin by thanking you for visiting my page! 🙏</p>
-                    <p style="font-size: 18px; line-height: 1.5;">As a Software Engineering Student, I'd love to learn, contribute
-                        and be part of a team working on something I'm truly passionate
-                        about!
+
+                <div id="contact-me-info">
+
+                    <h3>Let's Connect! ✉️</h3>
+
+                    <p>I want to begin by thanking you for visiting my page! 🙏</p>
+
+                    <p>
+                        As a Software Engineering Student, I'd love to learn, contribute and be part of a team working on something I'm truly passionate about!
                     </p>
-                    <p style="font-size: 18px; line-height: 1.5;">Feel free to send me an email using this form or by texting me on one of the
-                        socials below!
+
+                    <p>
+                        Feel free to send me an email using this form or by texting me on one of the socials below!
                     </p>
+
                     <div id="social-icons">
-                        <a href="https://www.linkedin.com/in/harsh-patel011/" target="_blank"><i class="fa-brands fa-square-linkedin" style="color:#0A66C2"></i></a>
-                        <a href="https://github.com/HarshPatel-2005" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.instagram.com/_harsh.patl/?next=%2F" target="_blank"><i class="fa-brands fa-instagram" style="color:#C13584"></i></a>
+
+                        <a href="https://www.linkedin.com/in/harsh-patel011/" target="_blank">
+                            <i class="fa-brands fa-square-linkedin"></i>
+                        </a>
+
+                        <a href="https://github.com/HarshPatel-2005" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/_harsh.patl/?next=%2F" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
                     </div>
                 </div>
-                <div id="div-form" method="POST">
-                    <form action="https://formspree.io/f/xnjwgnaj" id="form" method="POST">
+
+                <div id="div-form">
+
+                    <form action="https://formspree.io/f/xnjwgnaj"
+                        id="form"
+                        method="POST">
+
                         <div class="form-group">
                             <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your Name"
+                                required>
                         </div>
-                
+
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your Email"
+                                required>
                         </div>
+
                         <div class="form-group">
                             <label for="message">Message:</label>
-                            <textarea type="message" id="message" name="message" placeholder="Your Message" required
-                            style="height: 100px;"></textarea>
+
+                            <textarea id="message"
+                                name="message"
+                                placeholder="Your Message"
+                                required></textarea>
                         </div>
-                        <input id="submit" type="submit" value="Send Message"
-                        style="width: 25%;">
+
+                        <input id="submit"
+                            type="submit"
+                            value="Send Message">
+
                     </form>
+
                 </div>
+
             </div>
+
         </section>
-        
+
     </main>
 
 </body>

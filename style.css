@@ -81,7 +81,7 @@ main{
     display: flex;
     justify-content: center;
 
-    padding: 15px;
+    padding: 12px;
 }
 
 .navbar a:hover{
@@ -330,6 +330,7 @@ main{
     align-items: center;
 
     animation-range: entry 0 cover 40%;
+    padding: 35px;
 }
 
 #contact-me-div{
@@ -472,12 +473,14 @@ textarea{
     color: #C13584;
 }
 
-.fa-brands:hover, 
-.fa-github:hover{
+.fa-square-linkedin:hover, 
+.fa-github:hover,
+.fa-instagram:hover{
     transform: scale(1.1);
 }
 
-.fa-brands:active,
+.fa-square-linkedin:active,
+.fa-instagram:active,
 a:active,
 #submit:active,
 .fa-github:active{
@@ -504,7 +507,7 @@ a:active,
     }
 
     100%{
-        transform: translateX(-1800px);
+        transform: translateX(-1775px);
     }
 }
 
@@ -550,12 +553,17 @@ a:active,
     #LinkedInPic,
     #SimuloSS,
     #neonPixelGifCoding,
-    #STS-Images-Container img{
+    #STS-Images-Container{
         width: 90%;
         max-width: 450px;
         height: auto;
     }
 
+    #STS-Images-Container img{
+        max-width: 525px;
+        height: auto;
+    }
+    
     #contact-div{
         flex-direction: column;
         align-items: center;

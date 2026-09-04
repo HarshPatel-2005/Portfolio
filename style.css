@@ -274,7 +274,7 @@ main{
     margin: 10px;
 }
 
-#project-num-1{
+#project-num-1, #project-num-3{
     flex-direction: row-reverse;
 }
 
@@ -290,6 +290,13 @@ main{
 
     border: 2px solid black;
     border-radius: 10px;
+}
+
+#SCEPID{
+   width: 600px;
+
+    border: 2px solid black;
+    border-radius: 10px; 
 }
 
 #STS-Images-Container{
@@ -538,7 +545,8 @@ a:active,
     }
 
     #project-num-1,
-    #project-num-2{
+    #project-num-2,
+    #project-num-3{
         flex-direction: column;
 
         align-items: center;
@@ -552,6 +560,7 @@ a:active,
 
     #LinkedInPic,
     #SimuloSS,
+    #SCEPID,
     #neonPixelGifCoding,
     #STS-Images-Container{
         width: 90%;
